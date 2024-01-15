@@ -1,0 +1,17 @@
+Ultimate Java Notes
+
+=> Java producesbuilt in methods
+    input > processing > output
+    number > round() > roundedNumber
+
+=> class > mian method > Java code
+
+=> If we have void then its just a method with no returns.
+
+=> How works java code
+    Java Code >JDK> ByteCode > JRE > JVM (windows or mac or linux)
+    JDK = Java Development(includes jre and jvm) Kit JRE = Java Runtime Environment(libraries) JVM = Java Virtual Amchine (write one time use everywhere)
+
+=> Break and continue are statement not an expression. Staement consist of expressions. Thats why u cant use it in ternary.
+
+=> Java has many predefined methods. System.out.println() is one f them.

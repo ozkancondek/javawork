@@ -16,8 +16,8 @@ public class fileSystem {
 
 }
 
-
-/* ***************************Notes********************
-*Creating package is under src file and adding file means adding new class
-*Each class has a spesific package
-*/
+/*
+ * ***************************Notes********************
+ * Creating package is under src file and adding file means adding new class
+ * Each class has a spesific package
+ */
