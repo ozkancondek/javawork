@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class facFinder {
     public static void main(String[] args) {
-        facFinder(6);
+        System.out.println(facFinder());
     }
 
-    public static int facFinder(int num) {
+    public static int facFinder() {
         Scanner scan = new Scanner(System.in);
         System.out.println("Please give a number");
         int userInput = scan.nextInt();
