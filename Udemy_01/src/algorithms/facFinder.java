@@ -8,6 +8,7 @@ public class facFinder {
     }
 
     public static int facFinder() {
+        // user input
         Scanner scan = new Scanner(System.in);
         System.out.println("Please give a number");
         int userInput = scan.nextInt();
