@@ -5,8 +5,6 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
-import javax.swing.text.html.HTMLDocument.Iterator;
-
 public class ArrayList1 {
     public static void main(String[] args) {
         // adding new elements to list
