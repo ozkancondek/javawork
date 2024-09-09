@@ -1,50 +1,41 @@
 /*
-Constructor with Validation
-Write a Java program to create a class called Account with instance variables accountNumber and balance. Implement a parameterized constructor that initializes these variables with validation:
-
-    accountNumber should be non-null and non-empty.
-    balance should be non-negative.
-    Print an error message if the validation fails.
-
+Constructor with Default Values
+Write a Java program to create a class called Car with instance variables make, model, and year. 
+Implement a parameterized constructor that initializes these variables and assigns default values if not provided. 
+Print the values of the variables.
 */
 
-
-// Define the Account class
-public class Account {
+// Define the Car class
+public class Car {
     // Private instance variables
-    private String accountNumber;
-    private double balance;
+    private String make;
+    private String model;
+    private int year;
 
-    // Parameterized constructor with validation
-    public Account(String accountNumber, double balance) {
-        // Validate accountNumber
-        if (accountNumber == null || accountNumber.isEmpty()) {
-            // Print error message if accountNumber is null or empty
-            System.err.println("Error: Account number cannot be null or empty.");
-            return;
-        }
-        // Validate balance
-        if (balance < 0) {
-            // Print error message if balance is negative
-            System.err.println("Error: Balance cannot be negative.");
-            return;
-        }
-        // Initialize accountNumber with the provided parameter
-        this.accountNumber = accountNumber;
-        // Initialize balance with the provided parameter
-        this.balance = balance;
+    // Parameterized constructor with default values
+    public Car(String make, String model, int year) {
+        // Initialize make with the provided parameter or a default value
+        this.make = (make == null || make.isEmpty()) ? "Unknown Make" : make;
+        // Initialize model with the provided parameter or a default value
+        this.model = (model == null || model.isEmpty()) ? "Unknown Model" : model;
+        // Initialize year with the provided parameter or a default value
+        this.year = (year <= 0) ? 2000 : year;
     }
 
-    // Main method to test the Account class
+    // Main method to test the Car class
     public static void main(String[] args) {
-        // Test with valid data
-        Account account1 = new Account("12340009", 1000.00);
-        System.out.println("Account 1 Number: " + account1.accountNumber);
-        System.out.println("Account 1 Balance: " + account1.balance);
+        // Create a new Car object with valid data
+        Car car1 = new Car("Toyota", "Corolla", 2021);
+        // Print the values of the instance variables for car1
+        System.out.println("Car 1 Make: " + car1.make);
+        System.out.println("Car 1 Model: " + car1.model);
+        System.out.println("Car 1 Year: " + car1.year);
 
-        // Test with invalid accountNumber
-        Account account2 = new Account("", 400.00);
-
-        // Test with invalid balance
-        Account account3 = new Account("1230000873", -200.00);
+        // Create a new Car object with some invalid data
+        Car car2 = new Car("", "", -1);
+        // Print the values of the instance variables for car2
+        System.out.println("Car 2 Make: " + car2.make);
+        System.out.println("Car 2 Model: " + car2.model);
+        System.out.println("Car 2 Year: " + car2.year);
     }
+}
