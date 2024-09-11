@@ -1,41 +1,47 @@
 /*
-Constructor with Default Values
-Write a Java program to create a class called Car with instance variables make, model, and year. 
-Implement a parameterized constructor that initializes these variables and assigns default values if not provided. 
-Print the values of the variables.
+Overloading Constructors with Different Data Types
+Write a Java program to create a class called Point with instance variables x and y. Implement overloaded constructors:
+
+    One constructor takes int parameters.
+    Another constructor takes double parameters.
+    Print the values of the variables for each constructor.
+
 */
-
-// Define the Car class
-public class Car {
+// Define the Point class
+public class Point {
     // Private instance variables
-    private String make;
-    private String model;
-    private int year;
+    private int x;
+    private int y;
 
-    // Parameterized constructor with default values
-    public Car(String make, String model, int year) {
-        // Initialize make with the provided parameter or a default value
-        this.make = (make == null || make.isEmpty()) ? "Unknown Make" : make;
-        // Initialize model with the provided parameter or a default value
-        this.model = (model == null || model.isEmpty()) ? "Unknown Model" : model;
-        // Initialize year with the provided parameter or a default value
-        this.year = (year <= 0) ? 2000 : year;
+    // Constructor that takes int parameters
+    public Point(int x, int y) {
+        // Initialize instance variables
+        this.x = x;
+        this.y = y;
     }
 
-    // Main method to test the Car class
-    public static void main(String[] args) {
-        // Create a new Car object with valid data
-        Car car1 = new Car("Toyota", "Corolla", 2021);
-        // Print the values of the instance variables for car1
-        System.out.println("Car 1 Make: " + car1.make);
-        System.out.println("Car 1 Model: " + car1.model);
-        System.out.println("Car 1 Year: " + car1.year);
+    // Constructor that takes double parameters
+    public Point(double x, double y) {
+        // Initialize instance variables by casting double to int
+        this.x = (int) x;
+        this.y = (int) y;
+    }
 
-        // Create a new Car object with some invalid data
-        Car car2 = new Car("", "", -1);
-        // Print the values of the instance variables for car2
-        System.out.println("Car 2 Make: " + car2.make);
-        System.out.println("Car 2 Model: " + car2.model);
-        System.out.println("Car 2 Year: " + car2.year);
+    // Method to print the values of x and y
+    public void printPoint() {
+        System.out.println("Point (x, y): (" + x + ", " + y + ")");
+    }
+
+    // Main method to test the Point class
+    public static void main(String[] args) {
+        // Create a Point object using the int constructor
+        Point point1 = new Point(4, 5);
+        // Print the values of point1
+        point1.printPoint();
+
+        // Create a Point object using the double constructor
+        Point point2 = new Point(4.5, 5.5);
+        // Print the values of point2
+        point2.printPoint();
     }
 }
