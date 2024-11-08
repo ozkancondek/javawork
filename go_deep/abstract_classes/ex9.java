@@ -1,70 +1,103 @@
 /*
-Write a Java program to create an abstract class Instrument with abstract methods play() and tune(). 
-Create subclasses for Glockenspiel and Violin that extend the Instrument class and 
-implement the respective methods to play and tune each instrument.
+
+
+Write a Java program to create an abstract class GeometricShape with abstract methods area() and perimeter(). 
+Create subclasses Triangle and Square that extend the GeometricShape class and implement the respective 
+methods to calculate the area and perimeter of each shape.
 */
 
-//Instrument.java
-// Define an abstract class named Instrument
-abstract class Instrument {
-  // Declare an abstract method play
-  public abstract void play();
+// GeometricShape.java
+// Define an abstract class named GeometricShape
+abstract class GeometricShape {
+  // Declare an abstract method named area that returns a double
+  public abstract double area();
 
-  // Declare an abstract method tune
-  public abstract void tune();
-}
-//Glockenspiel.java
-// Define a class named Glockenspiel that extends the Instrument class
-class Glockenspiel extends Instrument {
-  // Override the play method from the Instrument class
-  @Override
-  public void play() {
-    // Print a message about playing the glockenspiel
-    System.out.println("Glockenspiel: Playing the notes on the metal bars.");
+  // Declare an abstract method named perimeter that returns a double
+  public abstract double perimeter();
+} 
+
+
+// Triangle.java
+// Define a class named Triangle that extends GeometricShape
+class Triangle extends GeometricShape {
+  // Declare private instance variables for the sides of the triangle
+  private double side1;
+  private double side2;
+  private double side3;
+
+  // Define a constructor that initializes the sides of the triangle
+  public Triangle(double side1, double side2, double side3) {
+    // Assign the parameters to the instance variables
+    this.side1 = side1;
+    this.side2 = side2;
+    this.side3 = side3;
   }
 
-  // Override the tune method from the Instrument class
+  // Override the area method from GeometricShape
   @Override
-  public void tune() {
-    // Print a message about tuning the glockenspiel
-    System.out.println("Glockenspiel: Tuning the metal bars to the correct pitch.");
+  // Implementation of the area method that calculates and returns the area of the triangle
+  public double area() {
+    // Calculate the semi-perimeter of the triangle
+    double s = (side1 + side2 + side3) / 2;
+    // Calculate and return the area using Heron's formula
+    return Math.sqrt(s * (s - side1) * (s - side2) * (s - side3));
+  }
+
+  // Override the perimeter method from GeometricShape
+  @Override
+  // Implementation of the perimeter method that returns the perimeter of the triangle
+  public double perimeter() {
+    // Return the sum of the sides of the triangle
+    return side1 + side2 + side3;
   }
 } 
-//Violin.java
-// Define a class named Violin that extends the Instrument class
-class Violin extends Instrument {
-  // Override the play method from the Instrument class
-  @Override
-  public void play() {
-    // Print a message about playing the violin
-    System.out.println("Violin: Playing the strings with a bow or fingers.");
+
+// Square.java
+// Define a class named Square that extends GeometricShape
+class Square extends GeometricShape {
+  // Declare a private instance variable for the side of the square
+  private double side;
+
+  // Define a constructor that initializes the side of the square
+  public Square(double side) {
+    // Assign the parameter to the instance variable
+    this.side = side;
   }
 
-  // Override the tune method from the Instrument class
+  // Override the area method from GeometricShape
   @Override
-  public void tune() {
-    // Print a message about tuning the violin
-    System.out.println("Violin: Tuning the strings to the correct pitch.");
+  // Implementation of the area method that calculates and returns the area of the square
+  public double area() {
+    // Calculate and return the area by squaring the side length
+    return side * side;
   }
-}
-//Main.java
+
+  // Override the perimeter method from GeometricShape
+  @Override
+  // Implementation of the perimeter method that returns the perimeter of the square
+  public double perimeter() {
+    // Calculate and return the perimeter by multiplying the side length by 4
+    return 4 * side;
+  }
+} 
+
 // Define the Main class
 public class Main {
-  // The main method, the entry point of the program
+  // Main method: entry point of the program
   public static void main(String[] args) {
-    // Create an instance of Glockenspiel as an Instrument
-    Instrument glockenspiel = new Glockenspiel();
-    // Create an instance of Violin as an Instrument
-    Instrument violin = new Violin();
+    // Create a Triangle object with sides 4, 5, and 6
+    GeometricShape triangle = new Triangle(4, 5, 6);
+    // Create a Square object with side length 6
+    GeometricShape square = new Square(6);
 
-    // Call the play method on the glockenspiel object
-    glockenspiel.play();
-    // Call the tune method on the glockenspiel object
-    glockenspiel.tune();
+    // Print the area of the triangle
+    System.out.println("Triangle Area: " + triangle.area());
+    // Print the perimeter of the triangle
+    System.out.println("Triangle Perimeter: " + triangle.perimeter());
 
-    // Call the play method on the violin object
-    violin.play();
-    // Call the tune method on the violin object
-    violin.tune();
+    // Print the area of the square
+    System.out.println("Square Area: " + square.area());
+    // Print the perimeter of the square
+    System.out.println("Square Perimeter: " + square.perimeter());
   }
-} 
+}
