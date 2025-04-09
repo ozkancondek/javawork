@@ -2,6 +2,8 @@ package com.example.github.oo.ex19;
 
 // TravelApp.java
 // Import the ArrayList class
+import com.example.github.oo.ex19.utils.Utils;
+
 import java.util.ArrayList;
 // Import the Random class
 import java.util.Random;
@@ -38,7 +40,7 @@ public class TravelApp {
         // Create a new Flight object with the provided details
         Flight flight = new Flight(flightNumber, passengerName, origin, destination, date, numPassengers, price);
         // Generate a confirmation number
-        int confirmationNumber = generateConfirmationNumber();
+        int confirmationNumber =Utils.generateConfirmationNumber();
         // Set the confirmation number for the flight
         flight.setConfirmationNumber(confirmationNumber);
         // Add the flight to the flights ArrayList
@@ -52,7 +54,7 @@ public class TravelApp {
         // Create a new Hotel object with the provided details
         Hotel hotel = new Hotel(hotelId, guestName, location, checkIn, checkOut, numGuests, price);
         // Generate a confirmation number
-        int confirmationNumber = generateConfirmationNumber();
+        int confirmationNumber = Utils.generateConfirmationNumber();
         // Set the confirmation number for the hotel
         hotel.setConfirmationNumber(confirmationNumber);
         // Add the hotel to the hotels ArrayList
@@ -85,13 +87,5 @@ public class TravelApp {
         }
         // Print a message if no reservation is found with the provided confirmation number
         System.out.println("No reservation found with confirmation number " + confirmationNumber + ".");
-    }
-
-    // Method to generate a random 6-digit confirmation number
-    private int generateConfirmationNumber() {
-        // Create a Random object
-        Random rand = new Random();
-        // Generate and return a random 6-digit number
-        return rand.nextInt(900000) + 100000;
     }
 }
