@@ -1,1 +1,0 @@
-Write a Java program to implement a lambda expression to find the sum of two integers.
