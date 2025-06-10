@@ -1,0 +1,1 @@
+Write a Java program to create a lambda expression to multiply and sum all elements in a list of integers.
