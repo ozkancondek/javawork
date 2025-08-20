@@ -1,0 +1,3 @@
+19. Find 2nd largest/smallest in array using lambda
+
+Write a Java program to implement a lambda expression to find the second largest and smallest element in an array.
