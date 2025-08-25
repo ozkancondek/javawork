@@ -1,0 +1,3 @@
+22. Check case of strings in list using lambda
+
+Write a Java program to implement a lambda expression to check if a list of strings are all uppercase or all lowercase or mixedcase.
