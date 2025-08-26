@@ -1,0 +1,3 @@
+24. Find largest prime factor using lambda
+
+Write a Java program to implement a lambda expression to find the largest prime factor of a given number.
