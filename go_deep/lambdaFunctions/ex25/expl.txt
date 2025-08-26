@@ -1,0 +1,3 @@
+25. Convert integer to binary using lambda
+
+Write a Java program to implement a lambda expression to convert an integer to their corresponding binary representation.
