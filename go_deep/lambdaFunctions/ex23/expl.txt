@@ -1,0 +1,3 @@
+23. Find average string length using lambda
+
+Write a Java program to implement a lambda expression to find the average length of strings in a list. program to implement a lambda expression to check if a list of strings are all uppercase or all lowercase or mixedcase.
