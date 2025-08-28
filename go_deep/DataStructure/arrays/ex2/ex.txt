@@ -1,0 +1,3 @@
+2. Sum all values in an array
+
+Write a Java program to sum values of an array.
