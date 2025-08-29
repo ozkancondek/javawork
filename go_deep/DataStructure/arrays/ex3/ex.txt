@@ -1,0 +1,14 @@
+3. Print a 10x10 grid of dashes
+
+Write a Java program to print the following grid.
+
+- - - - - - - - - -
+- - - - - - - - - -
+- - - - - - - - - -
+- - - - - - - - - -
+- - - - - - - - - -
+- - - - - - - - - -
+- - - - - - - - - -
+- - - - - - - - - -
+- - - - - - - - - -
+- - - - - - - - - -
