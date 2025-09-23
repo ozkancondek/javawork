@@ -1,0 +1,3 @@
+18. Find second smallest array element
+
+Write a Java program to find the second smallest element in an array.
