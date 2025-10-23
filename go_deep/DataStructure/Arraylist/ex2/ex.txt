@@ -1,0 +1,3 @@
+2. Iterate ArrayList Elements
+
+Write a Java program to iterate through all elements in an array list..
