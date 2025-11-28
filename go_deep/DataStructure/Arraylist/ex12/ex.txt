@@ -1,0 +1,15 @@
+12. Extract Sublist from ArrayList
+
+Write a Java program to extract a portion of an array list.
+
+13. Compare Two ArrayLists
+
+Write a Java program to compare two array lists.
+
+14. Swap ArrayList Elements
+
+Write a Java program that swaps two elements in an array list.
+
+15. Join Two ArrayLists
+
+Write a Java program to join two array lists.
