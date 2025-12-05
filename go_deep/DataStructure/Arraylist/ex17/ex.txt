@@ -1,0 +1,5 @@
+
+17. Clear ArrayList
+
+Write a Java program to empty an array list.
+

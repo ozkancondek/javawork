@@ -1,0 +1,6 @@
+
+
+16. Clone ArrayList
+
+Write a Java program to clone an array list to another array list.
+
