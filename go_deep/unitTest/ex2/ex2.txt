@@ -1,0 +1,3 @@
+2. Assert Exception Thrown on Invalid Input
+
+Write a Java test case to verify that a specific exception is thrown when a method is called with invalid input.
