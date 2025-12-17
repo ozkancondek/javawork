@@ -1,0 +1,3 @@
+3. JUnit Setup and Teardown Test
+
+Write a Java test case that implements a JUnit test with setup and teardown methods to prepare and clean up resources for multiple test cases.

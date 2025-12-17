@@ -1,0 +1,2 @@
+4. Parameterized Test for Multiple Inputs
+Write a Java program that implements parameterized test to verify that a method behaves correctly for different input values. 
