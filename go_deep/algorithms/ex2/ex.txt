@@ -1,0 +1,6 @@
+2.
+Currency Converter : Convert between different currencies based on user input.
+
+Input: 100 USD to EUR
+
+Output: 92.50 EUR (depends on current exchange rate)
